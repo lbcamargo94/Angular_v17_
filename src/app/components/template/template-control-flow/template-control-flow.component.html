@@ -1,0 +1,25 @@
+<h2>Control Flow</h2>
+
+<div>
+  <button (click)="handleView()">change</button>
+</div>
+
+<!-- Forma Nova -->
+
+<div>
+  <h3>IF</h3>
+  @if (isTrue) {
+  <p>OK!</p>
+  } @else{
+  <p>Oh Nooo!</p>
+  }
+</div>
+
+<!-- Forma Antiga -->
+
+<ng-container *ngIf="isTrue; else isFalse">
+  <p>Vini</p>
+  <p>Guide</p>
+</ng-container>
+
+<ng-template #isFalse> Oh No, it's not correct! </ng-template>
