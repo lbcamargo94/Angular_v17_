@@ -1,0 +1,55 @@
+<h2>Template</h2>
+
+<hr />
+
+<div>
+  <h3>Text Interpolation</h3>
+  Nome: {{ name }} - {{ age }}
+  <br>
+  Sort Number: {{sum(3,7)}}
+  <br>
+  <p>{{ age < 18 ? "Idade é menor que 18" : "Idade não é menor que 18" }}</p>
+</div>
+
+<hr />
+
+<div>
+  <h3>Property Binding</h3>
+  <!-- <element [property]="value"></element> -->
+  <button [disabled]="isDisabled">Button</button>
+  <img [src]="srcImageValue" [alt]="srcImageAlt" [title]="srcImageName" style="width: 100px; height: 100px;" />
+</div>
+
+<hr />
+
+<div>
+  <h3>Attribute Binding</h3>
+  <p [attr.tittle]="name" [attr.aria-label]="name">Ryan Cover</p>
+</div>
+
+<hr>
+
+<div>
+  <h3>Class and Style Binding</h3>
+  <p [class.background-red]="age >= 29" [class.background-blue]="age < 29">
+    {{name}}
+  </p>
+
+  <p [style.text-decoration]="isTextDecoratino">{{age}}</p>
+</div>
+
+<hr />
+
+<div>
+  <h3>Event Binding</h3>
+  <!-- <element (TargetEventName)="TemplateStatement"></element> -->
+  <button (click)="add()">+</button>
+  {{"#"}}
+  <button (click)="subtract()">-</button>
+  <br>
+  <br>
+  <input (keydown.shift.t)="onKeyDown($event)">
+  <br>
+  <div style="background: red; width: 100px; height: 100px; margin-top: 10px;" (mousemove)="onMouseMove($event)">
+  </div>
+</div>
