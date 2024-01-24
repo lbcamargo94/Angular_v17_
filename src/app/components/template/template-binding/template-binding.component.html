@@ -53,3 +53,24 @@
   <div style="background: red; width: 100px; height: 100px; margin-top: 10px;" (mousemove)="onMouseMove($event)">
   </div>
 </div>
+
+<div>
+  <h3>Two-way Binding</h3>
+  <input [(ngModel)]="name" />
+  {{ name }}
+</div>
+
+<div>
+  <h3>Diretivas de atributo</h3>
+  <span [ngClass]="{
+    'background-red': age > 29, 'background-blue': age < 29
+    }">
+    Classes Condicionais
+  </span>
+  <br>
+  <span [ngStyle]="{
+    color: age > 29 ? 'green' : 'red', 'font-size': age > 29 ? '10px' : '20px'
+    }">
+    Estilo Dinâmico
+  </span>
+</div>
